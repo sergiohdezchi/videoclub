@@ -101,7 +101,7 @@ class MoviesContainer extends React.Component {
         <NewMovie handleFormSubmit={this.handleFormSubmit}/>
         <MoviesList movies={this.state.movies} parentUpdateProject={this.parentUpdateProject} />
  
-                    <div className="row" style={{  'padding-bottom': '90px' }} />
+                    <div className="row" />
 
 
       </div>
