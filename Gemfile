@@ -10,6 +10,7 @@ gem 'webpacker-react', "~> 0.3.1"
 gem 'devise', git: 'git://github.com/plataformatec/devise.git'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.1'
+gem 'rails_12factor', group: :production
 # Use postgresql as the database for Active Record
 gem 'pg', '>= 0.18', '< 2.0'
 # Use Puma as the app server
