@@ -5463,6 +5463,13 @@ react-router@^4.3.1:
     prop-types "^15.6.1"
     warning "^4.0.1"
 
+react-smooth-dnd@^0.5.2:
+  version "0.5.2"
+  resolved "https://registry.yarnpkg.com/react-smooth-dnd/-/react-smooth-dnd-0.5.2.tgz#4cdb314ece6a4541534b9a1be6da68c5762fb158"
+  integrity sha512-LdAZGpbjK8+6+zLFJDGy/m+5ySPvAaJhjTqGu8+hOKDXifPQOhVsZsXBaOUOOlB5hIfYCkIYX9ZwhFObszL2/A==
+  dependencies:
+    smooth-dnd "0.6.2"
+
 react@^16.5.2:
   version "16.5.2"
   resolved "https://registry.yarnpkg.com/react/-/react-16.5.2.tgz#19f6b444ed139baa45609eee6dc3d318b3895d42"
@@ -6026,6 +6033,11 @@ slash@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/slash/-/slash-1.0.0.tgz#c41f2f6c39fc16d1cd17ad4b5d896114ae470d55"
   integrity sha1-xB8vbDn8FtHNF61LXYlhFK5HDVU=
+
+smooth-dnd@0.6.2:
+  version "0.6.2"
+  resolved "https://registry.yarnpkg.com/smooth-dnd/-/smooth-dnd-0.6.2.tgz#e21f6aac1a5b9626f0376d55107838012b349d6e"
+  integrity sha512-O3ndsZoYoOyjhKViVruUn4GX/X1IcnS2xqgoiW3D0eF3XTgazAO7F4falGKBlkEBpLP5te3wk79L/Jfvgjntbw==
 
 snapdragon-node@^2.0.1:
   version "2.1.1"
