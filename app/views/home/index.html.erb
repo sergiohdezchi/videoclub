@@ -1,0 +1,14 @@
+
+<% if user_signed_in? %>
+	
+
+
+<%= react_component('MoviesContainer', movies: @movies) %>
+
+<% else %>
+  
+
+
+<%= image_tag("popcorn.png",  alt: "popcorn", class: "img-fluid") %>
+
+<% end %>

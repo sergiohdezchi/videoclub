@@ -1,0 +1,38 @@
+
+
+<div class="container">
+<%- if @movie.errors.any? %>
+	<div class="alert alert-danger" role="alert">
+	  Ah Ocurrido un error!
+	</div>
+<% end %>
+
+	<div class="form-group">
+		
+
+		<%= form_for @movie, :html => {:multipart => true}, builder: CustomFormBuilder do |f| %>
+		<%= f.label :title %>
+		<%= f.text_field :title, class: 'form-control' %>
+		<%= f.field_error :title %>
+		<br>
+		<%= f.label :description %>
+		<%= f.text_field :description, class: 'form-control' %>
+		<%= f.field_error :description %>
+		<br>
+		<%= f.label :year %>
+		<%= f.date_field :year, class: 'form-control' %>
+		<br>		
+		<%= f.label :genre %>
+		<%= f.text_field :genre, class: 'form-control' %>
+		<br>
+		<%= f.label :starring %>
+		<%= f.text_field :starring, class: 'form-control' %>
+		<br>
+		<%= f.label :photo %>
+		<%= f.file_field :photo %>
+		<br>
+		<%= f.submit 'Enviar', :class => 'btn btn-primary' %>
+		<% end %>
+
+	</div>
+</div>

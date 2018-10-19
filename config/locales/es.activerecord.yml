@@ -1,0 +1,13 @@
+es:
+  activerecord:
+    models:
+      movie: 'Pelicula'
+      
+    attributes:
+      movie:
+        description: 'Descripción'
+        photo: 'Imagen'
+        title: 'Titulo'
+        year: 'Año'
+        genre: 'Género'
+        starring: 'Protagonistas'

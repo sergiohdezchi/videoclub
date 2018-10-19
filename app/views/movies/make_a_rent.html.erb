@@ -1,0 +1,15 @@
+<% if user_signed_in? %>
+	
+
+
+<%= react_component('Cards') %> 
+
+
+<% else %>
+
+
+
+
+<%= image_tag("popcorn.png",  alt: "popcorn", class: "img-fluid") %>
+
+<% end %>

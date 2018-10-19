@@ -1,0 +1,12 @@
+es:
+  movies:
+    new:
+      form:
+        error: 'Ha ocurrido un error al intentar crear tu %{model}'
+    movie:
+      edit_link: 'Editar'
+      Title: 'Titulo'
+      Description: 'Descripción'
+      Genre: 'Genero'
+      Starring: 'Protagonistas'
+      Year: 'Año'
