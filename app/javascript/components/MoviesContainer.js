@@ -24,23 +24,28 @@ class MoviesContainer extends React.Component {
 
   handleFormSubmit(title, description, starring, year, genre, photo){
     console.log(title+ description+ starring+ year+ genre+ photo);
-    let body = JSON.stringify({movie: { title: title, description: description, starring: starring, year: year, genre: genre, photo: photo} })
+    if (title=='' && description=='') {
+           var notification2 = alertify.notify('No puede crear una pelicula sin titulo y descripcion.', 'error', 5, function(){});
+    }else{
+      let body = JSON.stringify({movie: { title: title, description: description, starring: starring, year: year, genre: genre, photo: photo} })
 
-    fetch('/movies', {
-      method: 'POST',
-    headers: {
-      'X-CSRF-Token': token,
-      'Accept': 'application/json',
-      'Content-Type': 'application/json'
-    },
-      body: body,
-    }).then((response) => {return response.json()})
-    .then((movie)=>{
-        this.setState({
-          movies: movie.sort((a, b) => a.id > b.id)
-        })
-        var notification = alertify.notify('Creado Correctamente', 'success', 5, function(){});
-    })
+      fetch('/movies', {
+        method: 'POST',
+      headers: {
+        'X-CSRF-Token': token,
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+        body: body,
+      }).then((response) => {return response.json()})
+      .then((movie)=>{
+          this.setState({
+            movies: movie.sort((a, b) => a.id > b.id)
+          })
+          var notification = alertify.notify('Creado Correctamente', 'success', 5, function(){});
+      })
+ 
+    }
     
   }
 

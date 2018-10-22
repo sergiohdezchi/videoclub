@@ -51,7 +51,7 @@ class Groups extends Component {
       }).then((movie)=>{
           console.log(movie.respuesta)
           if (movie.respuesta=='Se completó la renta') {
-            var notification = alertify.notify(movie.respuesta, 'success', 5, function(){});
+            var notification = alertify.notify(movie.respuesta, 'success', 2, function(){});
             notification.ondismiss = function(){ document.location.href="/"; };
 
           }else{
@@ -65,7 +65,7 @@ class Groups extends Component {
    rentMovie = (event) => {
       let datasend=[]
       if (this.state.items2.length==0) {
-        alert('no hay datos')
+        var notification2 = alertify.notify('No puede rentar sin haber seleccinado al menos una pelicula.', 'error', 5, function(){});
       }else{      
         this.state.items2.map((item) => {
           datasend=[...datasend, item.id ]
@@ -80,7 +80,7 @@ class Groups extends Component {
     return (
       <div className="row">
         <div className="col-md-12"><h3 className="centrado">Rentar Peliculas</h3></div>
-        <div className="col-md-12"><p className="opaco">(Arrastre a la derecha)</p></div>
+        <div className="col-md-12"><p className="opaco">(Arrastre sobre la linea punteada)</p></div>
         <div className="col-md-12">
           <div style={{ display: 'flex', justifyContent: 'stretch', marginTop: '50px', marginRight: '50px' }}>
             <div style={groupStyle}>

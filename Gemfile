@@ -8,6 +8,7 @@ gem 'mini_magick'
 gem 'jquery-rails'
 gem 'webpacker-react', "~> 0.3.1"
 gem 'devise', git: 'git://github.com/plataformatec/devise.git'
+gem 'fog'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.1'
 # Use postgresql as the database for Active Record

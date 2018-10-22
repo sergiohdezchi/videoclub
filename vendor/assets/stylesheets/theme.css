@@ -145,7 +145,6 @@ height: 50px;
         cursor: move !important;    
 }
 .smooth-dnd-container {
-	height: 500px;
     border-style: dashed;
     border-color: #ccc;
     line-height: 200px;
