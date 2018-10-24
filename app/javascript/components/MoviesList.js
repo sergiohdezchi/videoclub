@@ -39,11 +39,10 @@ class MoviesList extends React.Component {
                   genre: movie.genre,                  
                   year: movie.year,                                  
                   starring: movie.starring,                  
-                  photo: movie.photo.medium.url,
+                  photo: movie.photo.url,
               })
               : console.log('no')
-            // If you want to keep the values of the rest genres, then the check should be: 
-            // isSelected: (genre.id === selectedId) ? !genre.isSelected : genre.isSelected
+
          })
 
    /*     this.setState({
@@ -56,7 +55,7 @@ class MoviesList extends React.Component {
     console.log(this.props.movies)
     return  this.props.movies.map((movie) => {
       return(
-           <div  key={movie.id} className="col-sm-4" style={{marginTop: "20px"}}>
+           <div  key={movie.id} className="col-sm-12 col-md-6 col-lg-4" style={{marginTop: "20px"}}>
 
             <Movie
             id={movie.id}
@@ -81,37 +80,7 @@ class MoviesList extends React.Component {
     return (
        <div className="row">
 
-{/*
-          <div className="row" style={{marginTop: "50px"}}>
 
-            <div className="col-sm-2">
-            </div>
-
-            <div className="col-sm-2" style={{fontWeight: "bold"}}>
-              Title
-            </div>
-
-            <div className="col-sm-4" style={{fontWeight: "bold"}}>
-              Description
-            </div>
-
-            <div className="col-sm-2" style={{fontWeight: "bold"}}>
-              genre
-            </div>            
-
-            <div className="col-sm-2" style={{fontWeight: "bold"}}>
-              year
-            </div>            
-
-            <div className="col-sm-2" style={{fontWeight: "bold"}}>
-              starring
-            </div>            
-
-            <div className="col-sm-2" style={{fontWeight: "bold"}}>
-              photo
-            </div>
-
-          </div>*/}
 
           {this.renderProjectRows()}
 

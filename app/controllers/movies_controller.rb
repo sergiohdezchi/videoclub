@@ -19,9 +19,9 @@ class MoviesController < ApplicationController
 		@movie = Movie.new movie_params
 
 		if @movie.save
-			return redirect_to movies_path		
+			render json: @movie	
 		end
-		render :new 
+		return 1 
 	end
 
 	def show

@@ -28,7 +28,7 @@ class NewMovie extends React.Component {
 				        <input className="form-control" type='date'  ref={input => formFields.year = input} placeholder='Fecha' /><br></br>
 				        <input className="form-control" type="file"  ref={input => formFields.photo = input} placeholder='Imagen' />   <br></br>
 
-				        <button data-dismiss="modal" className="btn btn-success" onClick={ () => this.props.handleFormSubmit(formFields.title.value, formFields.description.value, formFields.starring.value, formFields.year.value, formFields.genre.value, formFields.photo.value)}>Submit</button>
+				        <button data-dismiss="modal" className="btn btn-success" onClick={ () => this.props.handleFormSubmit(formFields.title.value, formFields.description.value, formFields.starring.value, formFields.year.value, formFields.genre.value, formFields.photo)}>Submit</button>
 			      </div>
 			    </div>
 			  </div>

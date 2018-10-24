@@ -55,7 +55,7 @@ class FormUpdate extends React.Component {
 
    handlePhotoChange = (event) => {
     this.setState({
-      photo: event.target.value
+      photo: event.target.files[0]
     })
   }
 
@@ -84,8 +84,15 @@ class FormUpdate extends React.Component {
       let year = this.state.year
       let photo = this.state.photo
 
-      let movies = {id: id, title: title, description: description, starring: starring, genre: genre, year: year, photo: photo}
-      this.props.parentUpdateProject(movies)
+      var formData = new FormData()
+      formData.append("movie[title]", title)
+      formData.append("movie[description]", description)
+      formData.append("movie[starring]", starring)
+      formData.append("movie[year]", year)
+      formData.append("movie[genre]", genre)
+      formData.append("movie[id]", id)
+      formData.append("movie[photo]", photo)
+      this.props.parentUpdateProject(formData,id)
 
 
   }
