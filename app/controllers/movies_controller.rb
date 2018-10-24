@@ -35,7 +35,8 @@ class MoviesController < ApplicationController
 
 	def update
 		@movie.update movie_params
-		#redirect_to @movie		
+		#redirect_to @movie
+		@movie = Movie.find params[:id]		
 		render json: @movie
 	end
 

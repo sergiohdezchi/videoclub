@@ -6,5 +6,13 @@ class PhotoUploader < CarrierWave::Uploader::Base
   
   # Choose what kind of storage to use for this uploader:
   storage :fog
+  def default_url(*args)
 
+      ActionController::Base.helpers.asset_path("default.png")
+
+  end
+  def extension_whitelist
+    %w(jpg jpeg gif png)
+  end
+  
 end

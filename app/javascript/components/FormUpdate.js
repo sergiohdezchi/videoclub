@@ -91,7 +91,16 @@ class FormUpdate extends React.Component {
       formData.append("movie[year]", year)
       formData.append("movie[genre]", genre)
       formData.append("movie[id]", id)
-      formData.append("movie[photo]", photo)
+
+      var pattern = new RegExp("((http|https)(:\/\/))?([a-zA-Z0-9]+[.]{1}){2}[a-zA-z0-9]+(\/{1}[a-zA-Z0-9]+)*\/?","i"); 
+      if(!pattern.test(photo)) {
+        formData.append("movie[photo]", photo)
+        console.log('no era')
+      } else {
+        formData.append("movie[photo]", '')
+        console.log('si era')
+      }
+
       this.props.parentUpdateProject(formData,id)
 
 

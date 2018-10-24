@@ -85,7 +85,7 @@ class MoviesContainer extends React.Component {
               var movie = response
               let newMovies = that.state.movies.filter((f) => f.id !== movie.id)
               newMovies.push(movie)
-
+              console.log(movie)
 
               that.setState({
                 movies: newMovies.sort((a, b) => a.id > b.id)
